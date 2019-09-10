@@ -15,7 +15,7 @@ use pocketmine\command\{
     Command, CommandSender
 };
 
-use PiggyCustomEnchants\CustomEnchants\CustomEnchants;
+use DaPigGuy\PiggyCustomEnchants\CustomEnchants\CustomEnchants;
 
 class Main extends PluginBase implements Listener{
 
@@ -83,13 +83,13 @@ class Main extends PluginBase implements Listener{
     public function getCost(int $data){
         switch($data){
             case 0:
-                return $this->cofig->get("Common");
+                return $this->config->get("Common");
             case 1:
-                return $this->cofig->get("Uncommon");
+                return $this->config->get("Uncommon");
             case 2:
-                return $this->cofig->get("Rare");
+                return $this->config->get("Rare");
             case 3:
-                return $this->cofig->get("Mythic");
+                return $this->config->get("Mythic");
         }
         return true;
     }
